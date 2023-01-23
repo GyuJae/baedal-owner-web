@@ -1,3 +1,4 @@
+import { SSRData } from '@urql/core/dist/types/exchanges/ssr';
 import { FC } from 'react';
 import {
   cacheExchange,
@@ -12,7 +13,7 @@ import { isAuthError } from './shared';
 
 declare global {
   interface Window {
-    __URQL_DATA__: any;
+    __URQL_DATA__?: SSRData;
   }
 }
 
